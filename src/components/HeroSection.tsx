@@ -4,10 +4,10 @@ import { Vortex } from "./ui/vortex";
 
 export function VortexDemo() {
   return (
-    <div className=" mx-auto rounded-md  h-[30rem] z-1 flex mt-1 overflow-hidden">
+    <div className=" mx-auto rounded-md  h-[100vh] z-1 flex mt-1 overflow-hidden">
       <Vortex
         backgroundColor="black"
-        className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
+        className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-[100vh]"
       >
         <h2 className="text-green-500 text-2xl md:text-6xl font-bold text-center">
             Geeks for Geeks
