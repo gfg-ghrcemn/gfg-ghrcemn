@@ -1,1 +1,1 @@
-{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/HeroSection.tsx","./src/components/NavbarHome.tsx","./src/components/ui/border-beam.tsx","./src/components/ui/sparkles.tsx","./src/components/ui/vortex.tsx","./src/lib/utils.ts"],"version":"5.6.2"}
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/HeroSection.tsx","./src/components/NavbarHome.tsx","./src/components/ui/border-beam.tsx","./src/components/ui/vortex.tsx","./src/lib/utils.ts"],"version":"5.6.2"}
