@@ -42,10 +42,10 @@ export function VortexDemo() {
           <img src={gfg} alt="GFG" className="h-[20vh] w-48" />
         </div>
         <TextGenerateEffect words="Geeks for Geeks" className="text-green-500 text-2xl items-center md:text-6xl font-bold text-center" />
-        <p className="text-white items-center font-mono w-[100%] text-sm md:text-2xl  mt-6 text-center">
+        <p className="text-white items-center  w-[100%] text-sm md:text-2xl  mt-6 text-center">
             GHRCEMN STUDENT CHAPTER
         </p>
-        <TypewriterEffectSmooth words={word} className="text-white justify-center items-center text-center w-[100%] font-mono text-sm md:text-2xl  mt-6" />
+        <TypewriterEffectSmooth words={word} className="text-white justify-center items-center text-center font-mono text-sm md:text-2xl  mt-6" />
         <div className="flex flex-col sm:flex-row items-center  justify-center gap-4 mt-6">
           <button className="border-green-500 border-1 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-green-600 shadow-lg">
             Our Events

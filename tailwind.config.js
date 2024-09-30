@@ -10,17 +10,6 @@ export default {
   theme: {
   	extend: {
   		colors: {
-  			primary: {
-  				'100': '#f0f4ff',
-  				'200': '#d9e4ff',
-  				'300': '#a6c1ff',
-  				'400': '#598bff',
-  				'500': '#3366ff',
-  				'600': '#254eda',
-  				'700': '#1e40b1',
-  				'800': '#1a348d',
-  				'900': '#152c75'
-  			},
   			dark: {
   				'100': '#f8f9fa',
   				'200': '#e9ecef',
@@ -48,7 +37,10 @@ export default {
   					'offset-distance': '100%'
   				}
   			}
-  		}
+  		},
+		fontFamily: {
+			Silkscreen: ['Silkscreen', 'sans-serif'],
+		}
   	}
   },
   plugins: [nextui(), require("tailwindcss-animate")],

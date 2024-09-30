@@ -62,7 +62,7 @@ export default function NavbarHome() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button  className="bg-green-500 w-[6rem] text-black  font-semibold" href="#" variant="flat">
+          <Button  className="bg-green-500 p-1 text-black font-bold text-base" href="#" variant="flat">
             Contact us
           </Button>
         </NavbarItem>

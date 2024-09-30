@@ -20,7 +20,7 @@ interface EventCardProps {
           <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">
             Register
           </button>
-          <button className="bg-transparent hover:bg-green-700 text-white border-2 border-green-400 rounded-lg font-bold py-2 px-4 ml-2">
+          <button className="bg-transparent hover:bg-green-700 text-white border-2 border-green-400 rounded-lg text-sm text-nowrap py-2 px-4 ml-2">
             Know More
           </button>
         </div>

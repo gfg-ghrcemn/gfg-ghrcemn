@@ -1,8 +1,12 @@
 import React from 'react';
+import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision';
+import Meteors from './ui/meteors';
 
 const AboutSection: React.FC = () => {
   return (
     <div className="bg-inherit text-white py-16 px-6">
+      <BackgroundBeamsWithCollision>
+        <Meteors number={10} />
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold text-green-400 text-center mb-8">
           About GFG Club
@@ -22,6 +26,7 @@ const AboutSection: React.FC = () => {
           </button>
         </div>
       </div>
+      </BackgroundBeamsWithCollision>
     </div>
   );
 };
