@@ -1,25 +1,56 @@
 
+import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { Vortex } from "./ui/vortex";
+import gfg from "../assets/logos/gfg logo.svg";
+const word = [
+  {
+    text: "A Community of",
+    color: "white",
+  },
+  {
+    text: " Students",
+  },
+  {
+    text: "who",
+  }
+  ,
+  {
+    text: " Code",
+  },
+  {
+    text: " and",
+  },
+  {
+    text: " Learn",
+  },
+  {
+    text: " Together",
+  },
 
+];
 
 export function VortexDemo() {
   return (
-    <div className=" mx-auto rounded-md  h-[100vh] z-1 flex mt-1 overflow-hidden">
+    <div className="bg-black mt-40 overflow-hidden">
+
       <Vortex
         backgroundColor="black"
-        className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-[100vh]"
+        className="flex flex-col justify-center px-2 md:px-10 py-1"
       >
-        <h2 className="text-green-500 text-2xl md:text-6xl font-bold text-center">
-            Geeks for Geeks
-        </h2>
-        <p className="text-white font-mono text-sm md:text-2xl max-w-xl mt-6 text-center">
+        <div className="flex justify-center items-center h-[20vh]">
+          <img src={gfg} alt="GFG" className="h-[20vh] w-48" />
+        </div>
+        <TextGenerateEffect words="Geeks for Geeks" className="text-green-500 text-2xl items-center md:text-6xl font-bold text-center" />
+        <p className="text-white items-center font-mono w-[100%] text-sm md:text-2xl  mt-6 text-center">
             GHRCEMN STUDENT CHAPTER
         </p>
-        <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
-          <button className="px-4 py-2 bg-green-500 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
-            join now
+        <TypewriterEffectSmooth words={word} className="text-white justify-center items-center text-center w-[100%] font-mono text-sm md:text-2xl  mt-6" />
+        <div className="flex flex-col sm:flex-row items-center  justify-center gap-4 mt-6">
+          <button className="border-green-500 border-1 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-green-600 shadow-lg">
+            Our Events
           </button>
-          <button className="px-4 py-2  text-white ">Watch trailer</button>
+          <button className="px-6 py-3  text-green-500 font-extrabold hover:border-2 hover:border-green-500 rounded-lg shadow-sm shadow-white ">Our Team</button>
         </div>
       </Vortex>
     </div>
@@ -30,7 +61,7 @@ export function VortexDemo() {
 
 const HeroSection = () => {
     return (
-        <div className="overflow-hidden">
+        <div className="overflow-hidden h-[90vh]">
         <VortexDemo />
         </div>
     );

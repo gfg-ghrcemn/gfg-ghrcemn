@@ -1,21 +1,15 @@
 import  { useEffect, useState } from "react";
 import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
-import GFG from "../assets/logos/GFG.png";
-
-
-function AcmeLogo() {
-  return <img src={GFG} alt="GFG" className="size-[14.5em] text-green-500 rounded-lg" />;
-}
-
+import Gfg from "../assets/logos/gfg logo.svg";
 export default function NavbarHome() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState<string>(); // Default active item is "Home"
 
   const menuItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/About" },
-    { name: "Event", href: "/Event" },
-    { name: "Team", href: "/Team" },
+    { name: "About", href: "#About" },
+    { name: "Event", href: "#Events" },
+    { name: "Team", href: "#Team" },
   ];
 
   const handleActive = (item: string) => {
@@ -36,14 +30,14 @@ export default function NavbarHome() {
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-black z-1 text-secondary font-semibold flex justify-evenly p-2 align-center rounded-lg max-w-[90%] w-[80%]   mx-auto lg:mx-auto mt-2"
+      className="bg-black border-secondary text-secondary font-semibold flex justify-evenly p-2  h-[10vh] align-center rounded-lg max-w-[90%] w-[80%] mx-auto lg:mx-auto"
     >
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         className="sm:hidden"
       />
       <NavbarBrand>
-        <AcmeLogo />
+        <img src={Gfg} alt="GFG" className="h-[9vh] w-30" />
       </NavbarBrand>
       <NavbarContent className=" hidden sm:flex gap-4 justify-center items-center font-semibold" justify="center">
         {menuItems.map((item) => (
@@ -68,12 +62,12 @@ export default function NavbarHome() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} className="bg-green-500 text-black font-semibold" href="#" variant="flat">
+          <Button  className="bg-green-500 w-[6rem] text-black  font-semibold" href="#" variant="flat">
             Contact us
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="bg-black text-pretty text-secondary">
+      <NavbarMenu className="bg-black mt-10 font-bold text-center text-8xl underline-offset-4 uppercase text-secondary">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index}>
             <Link href="#">{item.name}</Link>
