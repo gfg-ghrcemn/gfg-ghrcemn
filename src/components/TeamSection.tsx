@@ -30,103 +30,98 @@ const TeamCard: React.FC<TeamMember> = ({ name, position, image, linkedin }) => 
 const TeamSection: React.FC = () => {
   // Team members data
   const teamMembers: TeamMember[] = [
-    {
-      name: "Kanis",
-      position: "Founder & CEO",
-      image: "https://example.com/member1.jpg",
-      linkedin: "https://linkedin.com/in/johndoe",
-    },
-    {
-      name: "Jane Smith",
-      position: "CTO",
-      image: "https://example.com/member2.jpg",
-      linkedin: "https://linkedin.com/in/janesmith",
-    },
-    {
-      name: "Alice Johnson",
-      position: "Lead Developer",
-      image: "https://example.com/member3.jpg",
-      linkedin: "https://linkedin.com/in/alicejohnson",
-    },
-    {
-      name: "Bob Brown",
-      position: "Marketing Head",
-      image: "https://example.com/member4.jpg",
-      linkedin: "https://linkedin.com/in/bobbrown",
-    },
-    {
-      name: "Catherine White",
-      position: "UI/UX Designer",
-      image: "https://example.com/member5.jpg",
-      linkedin: "https://linkedin.com/in/catherinewhite",
-    },
-    {
-      name: "David Green",
-      position: "Backend Developer",
-      image: "https://example.com/member6.jpg",
-      linkedin: "https://linkedin.com/in/davidgreen",
-    },
-    {
-      name: "Emily Brown",
-      position: "Frontend Developer",
-      image: "https://example.com/member7.jpg",
-      linkedin: "https://linkedin.com/in/emilybrown",
-    },
-    {
-      name: "Frank Wilson",
-      position: "DevOps Engineer",
-      image: "https://example.com/member8.jpg",
-      linkedin: "https://linkedin.com/in/frankwilson",
-    },
-    {
-      name: "Grace Lee",
-      position: "Project Manager",
-      image: "https://example.com/member9.jpg",
-      linkedin: "https://linkedin.com/in/gracelee",
-    },
-    {
-      name: "Henry Martin",
-      position: "Data Scientist",
-      image: "https://example.com/member10.jpg",
-      linkedin: "https://linkedin.com/in/henrymartin",
-    },
-    {
-      name: "Isabella Clark",
-      position: "QA Engineer",
-      image: "https://example.com/member11.jpg",
-      linkedin: "https://linkedin.com/in/isabellaclark",
-    },
-    {
-      name: "Jack White",
-      position: "Blockchain Developer",
-      image: "https://example.com/member12.jpg",
-      linkedin: "https://linkedin.com/in/jackwhite",
-    },
-    {
-      name: "Karen Thomas",
-      position: "AI Researcher",
-      image: "https://example.com/member13.jpg",
-      linkedin: "https://linkedin.com/in/karenthomas",
-    },
-    {
-      name: "Leo Turner",
-      position: "Product Designer",
-      image: "https://example.com/member14.jpg",
-      linkedin: "https://linkedin.com/in/leoturner",
-    },
-    {
-      name: "Mia Parker",
-      position: "Business Analyst",
-      image: "https://example.com/member15.jpg",
-      linkedin: "https://linkedin.com/in/miaparker",
-    },
-    {
-      name: "Nathan Hill",
-      position: "Community Manager",
-      image: "https://example.com/member16.jpg",
-      linkedin: "https://linkedin.com/in/nathanhill",
-    },
-  ];
+  {
+    "name": "Tanaya Pillewan",
+    "position": "Chapter Lead",
+    "image": "src/assets/team/tanaya.jpg",
+    "linkedin": "https://www.linkedin.com/in/tanaya-pillewan-38370a256"
+  },
+  {
+    "name": "Saloni Zade",
+    "position": "Chair-person",
+    "image": "src/assets/team/saloni.jpg",
+    "linkedin": "https://www.linkedin.com/in/saloni-zade-7aa816257"
+  },
+  {
+    "name": "Siddhanth Sakhare",
+    "position": "PRO Coordinator",
+    "image": "src/assets/team/siddhanth.jpg",
+    "linkedin": "https://www.linkedin.com/in/siddhanth-kishor-sakhare-159653257/"
+  },
+  {
+    "name": "Gagan Thakre",
+    "position": "Social Media Head",
+    "image": "src/assets/team/gagan.jpg",
+    "linkedin": "https://www.linkedin.com/in/gagan-thakre-93a209258"
+  },
+  {
+    "name": "Karan Yede",
+    "position": "Designing/Branding Head",
+    "image": "src/assets/team/karan.jpg",
+    "linkedin": "https://www.linkedin.com/in/karanyede"
+  },
+  {
+    "name": "Sanskruti Uge",
+    "position": "Marketing Head Coordinator",
+    "image": "src/assets/team/sanskruti.jpg",
+    "linkedin": "https://www.linkedin.com/in/sanskruti-uge-3883ba290/"
+  },
+  {
+    "name": "Vaishnavi Agrawal",
+    "position": "Vice-Chair Person",
+    "image": "src/assets/team/vaishnavi.jpg",
+    "linkedin": "https://www.linkedin.com/in/vaishnavi-agrawal-2a419a25a"
+  },
+  {
+    "name": "Kartikey Bisen",
+    "position": "Marketing Head",
+    "image": "src/assets/team/kartikey.jpg",
+    "linkedin": "https://www.linkedin.com/in/kartikey-bisen-97b306305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    "name": "Jilani Sheikh",
+    "position": "Event Head Coordinator",
+    "image": "src/assets/team/jilani.jpg",
+    "linkedin": "https://www.linkedin.com/in/jilani-sheikh-79b094305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    "name": "Karan Baghele",
+    "position": "Designing/Branding Head",
+    "image": "src/assets/team/karanbaghele.jpg",
+    "linkedin": "https://www.linkedin.com/in/thekaranbaghele"
+  },
+  {
+    "name": "Riddhi Sharma",
+    "position": "Event Head",
+    "image": "src/assets/team/riddhi.jpg",
+    "linkedin": "https://www.linkedin.com/in/riddhi-sharma-25b7b9279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
+  {
+    "name": "Vaibhav Talkhande",
+    "position": "Technical Head",
+    "image": "src/assets/team/vaibhav.jpg",
+    "linkedin": "https://www.linkedin.com/in/vaibhavtalkhande/"
+  },
+  {
+    "name": "Karan Soni",
+    "position": "Social Media Head",
+    "image": "src/assets/team/karansoni.jpg",
+    "linkedin": "https://www.linkedin.com/in/karan-soni-197423318"
+  },
+  {
+    "name": "Avinash Madnani",
+    "position": "Technical Head Coordinator",
+    "image": "src/assets/team/avinash.jpg",
+    "linkedin": "https://www.linkedin.com/in/avinash-madnani-37a01b20a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    "name": "Kanishq Birole",
+    "position": "Mentor",
+    "image": "src/assets/team/kanishq.jpg",
+    "linkedin": "https://www.linkedin.com/in/kanishqbirole?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  }
+]
+
 
   return (
     <div className="bg-inherit text-white py-16">
