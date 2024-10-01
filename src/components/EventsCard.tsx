@@ -9,7 +9,7 @@ interface EventCardProps {
   
   const EventCard: React.FC<EventCardProps> = ({ title, date, description, image }) => {
     return (
-      <div className="min-w-[300px] max-w-xs  p-2 overflow-hidden shadow-lg bg-transparent border-green-500 border-2 rounded-lg shadow-green-400 mx-2">
+      <div className="w-[25em]  p-2 overflow-hidden shadow-lg bg-transparent border-green-500 border-2 rounded-lg shadow-green-400 mx-2">
         <img className="w-full h-48 object-cover rounded-lg border-2 border-green-400" src={image} alt={title} />
         <div className="px-6 py-4 h-[200px]">
           <div className="font-bold text-xl mb-2 text-green-400">{title}</div>

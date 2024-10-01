@@ -1,81 +1,169 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import EventCard from "./EventsCard";
 
+interface Event {
+  title: string;
+  date: string;
+  description: string;
+  image: string;
+  link: string;
+}
 
 const EventSection: React.FC = () => {
   const navto = useNavigate();
 
-  const events = [
+  const events: Event[] = [
     {
-      title: "Smackathon",
-      date: "Coming Soon",
-      description: "Join us for a 24-hour hackathon to build amazing projects.",
-      image: "https://example.com/event1.jpg",
-      link: "/events/tech-conference-2024",
+      "title": "GFG Installation / TECHFORGE",
+      "date": "October 10, 2024",
+      "description": "GFG Student Chapter Forum Installation and experts talk over the respected workshop.",
+      "image": "https://example.com/event-techforge.jpg",
+      "link": "https://example.com/register-techforge"
     },
     {
-      title: "GFG Inauguration",
-      date: "Oct 10, 2024",
-      description: "Join us for the grand inauguration of GeeksforGeeks Student Chapter.",
-      image: "https://example.com/event2.jpg",
-      link: "/events/ai-future",
+      "title": "UI/UX IGNITE",
+      "date": "February 10-11, 2025",
+      "description": "A 2-day UI/UX hackathon, Day 1: Information Gathering, Day 2: Designing Hackathon.",
+      "image": "https://example.com/event-ui-ux.jpg",
+      "link": "https://example.com/register-uiux-ignite"
     },
     {
-      title: "UI/UX Jam",
-      date: "Coming Soon",
-      description: "UI/UX design workshop and hackathon for designers and developers.",
-      image: "https://example.com/event3.jpg",
-      link: "/events/web-dev-bootcamp",
+      "title": "TECH TRIVIA",
+      "date": "January 15, 2025",
+      "description": "A tech quiz covering topics from GFG.",
+      "image": "https://example.com/event-tech-quiz.jpg",
+      "link": "https://example.com/register-tech-trivia"
     },
     {
-      title: "Tech Conference 2024",
-      date: "March 20, 2024",
-      description: "Join us for a deep dive into the latest tech trends and innovations.",
-      image: "https://example.com/event1.jpg",
+      "title": "CODE CRUSADE",
+      "date": "February 25, 2025",
+      "description": "An inter-college treasure hunt event with coding challenges.",
+      "image": "https://example.com/event-code-treasure.jpg",
+      "link": "https://example.com/register-code-crusade"
     },
     {
-      title: "AI & Future",
-      date: "April 10, 2024",
-      description: "Discover the role of AI in shaping the future with expert speakers.",
-      image: "https://example.com/event2.jpg",
+      "title": "GFG ARENA: THE ULTIMATE CLASH",
+      "date": "March 10, 2025",
+      "description": "A code debugging event focusing on optimization techniques.",
+      "image": "https://example.com/event-debugging.jpg",
+      "link": "https://example.com/register-gfg-arena"
     },
     {
-      title: "Web Development Bootcamp",
-      date: "May 5, 2024",
-      description: "An intensive bootcamp to sharpen your web development skills.",
-      image: "https://example.com/event3.jpg",
+      "title": "CAREER CATALYST: PLACEMENT EDITION",
+      "date": "March 20, 2025",
+      "description": "A career-oriented event including aptitude, group discussion, and technical interviews.",
+      "image": "https://example.com/event-career.jpg",
+      "link": "https://example.com/register-career-catalyst"
+    },
+    {
+      "title": "TECH TOAST AND TOASTMASTERS",
+      "date": "April 5, 2025",
+      "description": "A Toastmasters event discussing the latest in technology.",
+      "image": "https://example.com/event-toastmasters.jpg",
+      "link": "https://example.com/register-tech-toast"
+    },
+    {
+      "title": "HACKEXPERIENCE SUMMIT",
+      "date": "April 15, 2025",
+      "description": "A collaborative hackathon event in partnership with RCOEM and Suresh Bhatt.",
+      "image": "https://example.com/event-hackathon.jpg",
+      "link": "https://example.com/register-hackexperience"
+    },
+    {
+      "title": "DOMAIN DYNAMICS",
+      "date": "April 25, 2025",
+      "description": "An event with domain-specific technical questions.",
+      "image": "https://example.com/event-domain.jpg",
+      "link": "https://example.com/register-domain-dynamics"
+    },
+    {
+      "title": "ALGORITHM QUEST",
+      "date": "May 1, 2025",
+      "description": "An MCQ-based event focusing on data structures and algorithms.",
+      "image": "https://example.com/event-dsa.jpg",
+      "link": "https://example.com/register-algorithm-quest"
+    },
+    {
+      "title": "MEMECEPTION SHOWDOWN",
+      "date": "May 10, 2025",
+      "description": "A month-long meme showdown competition.",
+      "image": "https://example.com/event-memes.jpg",
+      "link": "https://example.com/register-memeception"
     }
-    // Additional events...
   ];
+  
+  
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // Shows 3 events at a time
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ],
+  };
 
   const handleKnowMoreClick = () => {
-    navto('/events');
+    navto("/events");
   };
 
   return (
-    <div id="Events" className="overflow-hidden h-[90vh] flex flex-col items-center">
-      <h1 className="text-7xl font-extrabold text-green-400 mt-12 mb-6">
+    <div id="Events" className="h-[100vh] py-10 flex flex-col items-center">
+      <h1 className="text-5xl font-extrabold text-green-400 mt-12 mb-6">
         Events
-      </h1> 
+      </h1>
 
       <div className="text-center text-xl text-white mb-6">
         Check out our upcoming events and join us
       </div>
 
       {/* Carousel Section */}
-      <div className="flex overflow-x-auto flex-nowrap no-scrollbar space-x-4 px-4">
-        {events.map((event, index) => (
-          <div key={index} className="min-w-[300px] max-w-[300px]">
-            <EventCard
-              title={event.title}
-              date={event.date}
-              description={event.description}
-              image={event.image}
-              link={event.link}
-            />
-          </div>
-        ))}
+      <div className="slider-container w-[80%] px-4">
+        <Slider {...settings} className="w-full flex">
+          {events.map((event, index) => (
+            <div key={index} className="">
+              <EventCard
+                title={event.title}
+                date={event.date}
+                description={event.description}
+                image={event.image}
+                link={event.link}
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
 
       {/* Know More Button */}
