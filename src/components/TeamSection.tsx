@@ -125,92 +125,92 @@ const TeamSection: React.FC = () => {
     {
       "name": "Saloni Zade",
       "position": "Chair-person",
-      "image": "./src/assets/team/Saloni Zade.jpg",
+      "image": "Saloni Zade.jpg",
       "linkedin": "https://www.linkedin.com/in/saloni-zade-7aa816257"
     },
     {
       "name": "Vaishnavi Agrawal",
       "position": "Vice-Chair Person",
-      "image": "./src/assets/team/Vaishnavi_Agrawal.jpg",
+      "image": "Vaishnavi_Agrawal.jpg",
       "linkedin": "https://www.linkedin.com/in/vaishnavi-agrawal-2a419a25a"
     },
     {
       "name": "Vaibhav Talkhande",
       "position": "Technical Head",
-      "image": `./src/assets/team/vai.jpeg`,
+      "image": `vai.jpeg`,
       "linkedin": "https://www.linkedin.com/in/vaibhavtalkhande/"
     },
     {
       "name": "Siddhanth Sakhare",
       "position": "PRO Coordinator",
-      "image": "./src/assets/team/Siddhnath.jpg",
+      "image": "Siddhnath.jpg",
       "linkedin": "https://www.linkedin.com/in/siddhanth-kishor-sakhare-159653257/"
     },
     {
       "name": "Gagan Thakre",
       "position": "Social Media Head",
-      "image": "./src/assets/team/Gagan thakre.jpg",
+      "image": "Gagan thakre.jpg",
       "linkedin": "https://www.linkedin.com/in/gagan-thakre-93a209258"
     },
     {
       "name": "Karan Yede",
       "position": "Designing coordinator",
-      "image": "./src/assets/team/KaranYede.jpg",
+      "image": "KaranYede.jpg",
       "linkedin": "https://www.linkedin.com/in/karanyede"
     },
     {
       "name": "Sanskruti Uge",
       "position": "Marketing Coordinator",
-      "image": "src/assets/team/Sanskruti_uge.jpg",
+      "image": "Sanskruti_uge.jpg",
       "linkedin": "https://www.linkedin.com/in/sanskruti-uge-3883ba290/"
     },
 
     {
       "name": "Kartikey Bisen",
       "position": "Marketing Head",
-      "image": "./src/assets/team/KartikeyBisen.jpg",
+      "image": "KartikeyBisen.jpg",
       "linkedin": "https://www.linkedin.com/in/kartikey-bisen-97b306305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
     {
       "name": "Jilani Sheikh",
       "position": "Event Coordinator",
-      "image": "./src/assets/team/jilani sheikh.jpg",
+      "image": "jilani sheikh.jpg",
       "linkedin": "https://www.linkedin.com/in/jilani-sheikh-79b094305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
     {
       "name": "Karan Baghele",
       "position": "Designing Head",
-      "image": "./src/assets/team/karanbhagele.jpeg",
+      "image": "karanbhagele.jpeg",
       "linkedin": "https://www.linkedin.com/in/thekaranbaghele"
     },
     {
       "name": "Riddhi Sharma",
       "position": "Event Head",
-      "image": "./src/assets/team/Riddhi.jpg",
+      "image": "Riddhi.jpg",
       "linkedin": "https://www.linkedin.com/in/riddhi-sharma-25b7b9279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     {
       "name": "Karan Soni",
       "position": "Social Media Head",
-      "image": "./src/assets/team/karansoni.jpg",
+      "image": "karansoni.jpg",
       "linkedin": "https://www.linkedin.com/in/karan-soni-197423318"
     },
     {
       "name": "Avinash Madnani",
       "position": "Technical Coordinator",
-      "image": "./src/assets/team/AvinashMadnani.jpg",
+      "image": "AvinashMadnani.jpg",
       "linkedin": "https://www.linkedin.com/in/avinash-madnani-37a01b20a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
     {
       "name": "Vibhuti Sarode",
       "position": "PRO",
-      "image": "./src/assets/team/vibhuti sarode.jpg",
+      "image": "vibhuti sarode.jpg",
       "linkedin": "https://www.linkedin.com/in/vibhuti-sarode-5b0a0b1b7"
     },
     {
       "name": "Kanishq Birole",
       "position": "Mentor",
-      "image": "./src/assets/team/kanishq.jpeg",
+      "image": "kanishq.jpg",
       "linkedin": "https://www.linkedin.com/in/kanishqbirole?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     }
   ]
