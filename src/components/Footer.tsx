@@ -2,20 +2,14 @@ import logo from "../assets/logos/gfg logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
-  faXTwitter,
   faLinkedin,
-  faFacebook,
-  faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <div className="flex flex-row font-Silkscreen justify-around bg-green-500 h-[full] w-full  text-black font-game1 tracking-wide text-[10px] sm:text-sm sm:mx-auto md:text-lg gap-1">
+    <div className="flex flex-row font-Silkscreen justify-around  bg-green-500  w-full  text-black ftracking-wide text-[10px] sm:text-sm sm:mx-auto md:text-lg gap-1">
       <div className="flex flex-col sm:flex-row justify-center items-center mx-auto sm:gap-4 gap-2 m-2 sm:m-2 w-[45%]">
         <img src={logo} alt="" className="sm:h-22 w-48 h-40" />
-        <h1 className="  sm:text-left text-center sm:ml-0 ml-2">
-          GOOGLE DEVELOPER STUDENTS CLUB <br /> GHRIET NAGPUR
-        </h1>
       </div>
       <div className="flex flex-col m-2 mx-auto justify-center text-center sm:m-2 w-[40%]">
         <h1 className=" text-center leading-tight">
@@ -25,36 +19,20 @@ const Footer = () => {
       </div>
       <div className="flex flex-col font-Silkscreen m-2 mx-auto  justify-center text-center sm:m-2 leading-normal w-[40%]">
         <h1>FOLLOW US ON</h1>
-        <div className="flex mx-auto justify-between items-center sm:w-1/2 w-3/4 mt-2 ">
+        <div className="flex mx-auto justify-center gap-2 items-center sm:w-1/2 w-3/4 mt-2 ">
           <a
-            href="https://www.instagram.com/gdsc_ghrietn"
+            href="https://www.instagram.com/gfg_ghrcemn/"
             target="_blank"
             className=""
           >
             <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a
-            href="https://www.linkedin.com/company/gdsc-ghrietn/"
+            href="https://www.linkedin.com/company/gfg-ghrcemn/"
             target="_blank"
             className=""
           >
             <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-          <a
-            href="https://twitter.com/gdsc_ghrietn"
-            target="_blank"
-            className=""
-          >
-            <FontAwesomeIcon icon={faXTwitter} />
-          </a>
-          <a href="https://discord.gg/JVFr59kPkg" target="_blank" className="">
-            <FontAwesomeIcon icon={faDiscord} />
-          </a>
-          <a
-            href="https://www.facebook.com/people/Gdsc-Ghrietn/pfbid017qz8rYcNsf33adManeJPgBY4uF7TApJw4Uw7UQGgLUgp5nDrRC2ZHmSJjaCcRhol/"
-            target="_blank"
-          >
-            <FontAwesomeIcon icon={faFacebook} />
           </a>
         </div>
       </div>

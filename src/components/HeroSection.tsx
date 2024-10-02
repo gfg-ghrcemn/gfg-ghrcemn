@@ -32,13 +32,13 @@ const word = [
 
 export function VortexDemo() {
   return (
-    <div className="bg-black mt-40 overflow-hidden">
+    <div className="bg-black  overflow-hidden">
 
       <Vortex
         backgroundColor="black"
-        className="flex flex-col justify-center px-2 md:px-10 py-1"
+        className="flex flex-col h-[100vh] justify-center px-2 md:px-10 py-1"
       >
-        <div className="flex justify-center items-center h-[20vh]">
+        <div className="flex justify-center items-center h-[10vh]">
           <img src={gfg} alt="GFG" className="h-[20vh] w-48" />
         </div>
         <TextGenerateEffect words="Geeks for Geeks" className="text-green-500 text-2xl items-center md:text-6xl font-bold text-center" />
@@ -50,7 +50,7 @@ export function VortexDemo() {
           <button className="border-green-500 border-1 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-green-600 shadow-lg">
             Our Events
           </button>
-          <button className="px-6 py-3  text-green-500 font-extrabold hover:border-2 hover:border-green-500 rounded-lg shadow-sm shadow-white ">Our Team</button>
+          <button className="px-6 py-3 m-2 text-green-500 font-extrabold hover:border-2 hover:border-green-500 rounded-lg shadow-sm shadow-white ">Our Team</button>
         </div>
       </Vortex>
     </div>
@@ -61,7 +61,7 @@ export function VortexDemo() {
 
 const HeroSection = () => {
     return (
-        <div className="overflow-hidden h-[90vh]">
+        <div className="overflow-hidden h-[100vh]">
         <VortexDemo />
         </div>
     );

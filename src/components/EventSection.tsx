@@ -16,27 +16,27 @@ interface Event {
 const EventSection: React.FC = () => {
   const navto = useNavigate();
 
-  const events: Event[] = [
+ const events: Event[] = [
     {
       "title": "GFG Installation / TECHFORGE",
       "date": "October 10, 2024",
       "description": "GFG Student Chapter Forum Installation and experts talk over the respected workshop.",
-      "image": "https://example.com/event-techforge.jpg",
-      "link": "https://example.com/register-techforge"
+      "image": "inaugration.jpeg",
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLSeYOC_EkENP5GUiWgcngDIBPDBhUagnl_I-5lN1tHIVV9g08A/viewform"
     },
     {
       "title": "UI/UX IGNITE",
       "date": "February 10-11, 2025",
       "description": "A 2-day UI/UX hackathon, Day 1: Information Gathering, Day 2: Designing Hackathon.",
       "image": "https://example.com/event-ui-ux.jpg",
-      "link": "https://example.com/register-uiux-ignite"
+      "link": "/events/id=1"
     },
     {
       "title": "TECH TRIVIA",
       "date": "January 15, 2025",
       "description": "A tech quiz covering topics from GFG.",
       "image": "https://example.com/event-tech-quiz.jpg",
-      "link": "https://example.com/register-tech-trivia"
+      "link": "/id=2"
     },
     {
       "title": "CODE CRUSADE",
@@ -98,17 +98,17 @@ const EventSection: React.FC = () => {
   
   
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Shows 3 events at a time
-    slidesToScroll: 3,
+    slidesToShow: 4, // Shows 3 events at a time
+    slidesToScroll: 4,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
       {
@@ -140,7 +140,7 @@ const EventSection: React.FC = () => {
   };
 
   return (
-    <div id="Events" className="h-[100vh] py-10 flex flex-col items-center">
+    <div id="event" className="h-screen py-10 flex flex-col items-center">
       <h1 className="text-5xl font-extrabold text-green-400 mt-12 mb-6">
         Events
       </h1>
@@ -150,10 +150,10 @@ const EventSection: React.FC = () => {
       </div>
 
       {/* Carousel Section */}
-      <div className="slider-container w-[80%] px-4">
-        <Slider {...settings} className="w-full flex">
+      <div className="slider-container w-[90%] flex justify-center">
+        <Slider {...settings} className="w-[90%] flex">
           {events.map((event, index) => (
-            <div key={index} className="">
+            <div key={index}>
               <EventCard
                 title={event.title}
                 date={event.date}

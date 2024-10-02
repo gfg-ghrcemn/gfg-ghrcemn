@@ -5,6 +5,8 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import EventsPage from './Pages/Eventspage'
 import Home from './Pages/Home'
 import Footer from './components/Footer'
+import EventDetails from './components/EventDetails'
+import TeamPage from './Pages/TeamPage'
 
 function App() {
   
@@ -16,6 +18,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/events" element={<EventsPage/>}/>
+              <Route path='/events/:id' element={<EventDetails/>}/>
+              <Route path='/team' element={<TeamPage/>}/>
             </Routes>
             <Footer/>
           </div>
