@@ -119,7 +119,7 @@ const TeamSection: React.FC = () => {
     {
       "name": "Tanaya Pillewan",
       "position": "Chapter Lead",
-      "image": "assets/team/Tanaya Pilewan.jpg",
+      "image": "team/Tanaya Pilewan.jpg",
       "linkedin": "https://www.linkedin.com/in/tanaya-pillewan-38370a256"
     },
     {
