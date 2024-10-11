@@ -12,7 +12,7 @@ function App() {
   
 
   return (
-        <BrowserRouter basename='/gfg-ghrcemn'>
+        <BrowserRouter>
           <div className='bg-black font-Silkscreen m-0 p-0'>
             <NavbarHome/>
             <Routes>
