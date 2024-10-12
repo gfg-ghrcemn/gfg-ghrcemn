@@ -1,9 +1,36 @@
 [
     {
+      "id": "1",
+      "title": "GFG Streak Challenge",
+      "date": "October 21, 2024",
+      "description": "A 11-day dsa challenge to test your skills.",
+      "image": "/comingsoon.png",
+      "link": "/events/gfg-streak-challenge"
+
+    },
+    {
+      "id": "2",
       "title": "GFG Installation",
       "date": "October 10, 2024",
       "description": "GFG Student Chapter Forum Installation and experts talk over the respected workshop.",
-      "image": "inaugration.jpeg",
-      "link": "https://docs.google.com/forms/d/e/1FAIpQLSeYOC_EkENP5GUiWgcngDIBPDBhUagnl_I-5lN1tHIVV9g08A/viewform"
+      "image": "/inaugration.jpeg",
+      "link": "/events/id=1"
+    },
+    {
+      "id": "3",
+      "title": "UI/UX IGNITE",
+      "date": "February 10-11, 2025",
+      "description": "A 2-day UI/UX hackathon, Day 1: Information Gathering, Day 2: Designing Hackathon.",
+      "image": "/comingsoon.png",
+      "link": "/events/id=1"
+    },
+    {
+      "id": "4",
+      "title": "TECH TRIVIA",
+      "date": "January 15, 2025",
+      "description": "A tech quiz covering topics from GFG.",
+      "image": "/comingsoon.png",
+      "link": "/events/id=1"
     }
+
   ]

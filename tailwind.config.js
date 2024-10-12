@@ -5,8 +5,9 @@ export default {
     content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|navbar|ripple|spinner).js"
-  ],
+    "./node_modules/@nextui-org/theme/dist/components/(button|navbar|ripple|spinner).js",
+	"node_modules/preline/dist/*.js" 
+],
   theme: {
   	extend: {
   		colors: {
@@ -43,5 +44,5 @@ export default {
 		}
   	}
   },
-  plugins: [nextui(), require("tailwindcss-animate")],
+  plugins: [nextui(), require("tailwindcss-animate"),require('preline/plugin')],
 }

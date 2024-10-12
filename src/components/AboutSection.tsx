@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const AboutSection: React.FC = () => {
@@ -30,9 +31,9 @@ const AboutSection: React.FC = () => {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <button className="border-green-500 border-1 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-green-600 shadow-lg">
+          <Link to={"https://chat.whatsapp.com/KfqB1aBkEqnJRFsOtcMAjT"} className="border-green-500 border-1 text-white font-bold py-3 px-6 rounded-lg shadow-green-600 shadow-lg">
             Join the Club
-          </button>
+          </Link>
         </div>
 
     </div>

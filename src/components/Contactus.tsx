@@ -30,9 +30,9 @@ const Contact = () => {
       );
   };
   return (
-    <div id="contact" className="w-full h-screen flex flex-col items-center pt-16 overflow-hidden">
+    <div id="contact" className="w-full  flex flex-col items-center justify-center pt-16 overflow-hidden">
       <ToastContainer />
-      <div className="text-4xl sm:text-6xl font-bold text-green-500 mb-4">
+      <div className="text-4xl sm:text-4xl font-bold p-4 text-green-500 mb-4">
         Contact Us
       </div>
       <div className="w-full flex flex-col items-center">
@@ -46,17 +46,17 @@ const Contact = () => {
               ></iframe>
             </div>
           </div>
-          <div className="w-full sm:w-[60%] flex flex-col items-center bg-black border-2 border-green-500 rounded-lg p-4 sm:rounded-xl">
+          <div className="w-full sm:w-[50%]  flex flex-col items-center bg-black border-2 border-green-500 justify-evenly rounded-lg px-4 py-2 sm:rounded-xl">
             <form
               ref={form}
               onSubmit={sendEmail}
               className="w-full flex flex-col items-center"
             >
-              <div className="text-2xl sm:text-3xl text-green-500 font-bold mb-4 text-center">
+              <div className="text-2xl sm:text-2xl text-green-500 font-bold mb-4 text-center">
                 Feel free to ask us any questions
               </div>
               <div className="w-full mb-3">
-                <label className="text-lg sm:text-2xl font-bold text-white mb-1">
+                <label className="text-lg sm:text-xl font-bold text-white mb-1">
                   Name
                 </label>
                 <input
@@ -68,7 +68,7 @@ const Contact = () => {
                 />
               </div>
               <div className="w-full mb-3">
-                <label className="text-lg sm:text-2xl font-bold text-white mb-1">
+                <label className="text-lg sm:text-xl font-bold text-white mb-1">
                   Email
                 </label>
                 <input
@@ -78,7 +78,7 @@ const Contact = () => {
                 />
               </div>
               <div className="w-full mb-3">
-                <label className="text-lg sm:text-2xl font-bold text-white mb-1">
+                <label className="text-lg sm:text-1xl font-bold text-white mb-1">
                   Subject
                 </label>
                 <input
@@ -89,21 +89,21 @@ const Contact = () => {
                   minLength={3}
                 />
               </div>
-              <div className="w-full mb-4">
-                <label className="text-lg sm:text-2xl font-bold text-white mb-1">
+              <div className="w-full py-2">
+                <label className="text-lg sm:text-xl font-bold text-white mb-1">
                   Message
                 </label>
                 <textarea
                   name="message"
-                  rows={4}
+
                   className="w-full px-3 py-2 rounded-lg border-2 bg-black text-white border-green-400 focus:ring-2 focus:ring-green-500 focus:shadow-md text-lg"
                   required
-                  minLength={3}
+   
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full sm:w-[50%] py-2 sm:py-3 rounded-lg bg-green-500 text-white font-bold text-lg sm:text-xl hover:bg-green-600 transition-all duration-300"
+                className="w-full sm:w-[10em]  sm:py-3 rounded-lg bg-green-500 text-white font-bold text-lg sm:text-xl hover:bg-green-600 transition-all duration-300"
               >
                 SUBMIT
               </button>

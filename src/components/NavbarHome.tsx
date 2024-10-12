@@ -13,16 +13,17 @@ import {
   Button,
 } from "@nextui-org/react";
 import Gfg from "../assets/logos/gfg logo.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function NavbarHome() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState<string>("Home"); // Default active item
-
+  const navigate = useNavigate();
   const menuItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
-    { name: "Event", href: "#event" },
-    { name: "Team", href: "#team" },
+    { name: "About", href: "/about" },
+    { name: "Event", href: "/events" },
+    { name: "Team", href: "/team" },
   ];
 
   const onContactClick = () => {
@@ -37,6 +38,12 @@ export default function NavbarHome() {
     const handleScroll = () => {
       // Check the URL hash or pathname to set the active item
       const hash = window.location.hash || window.location.pathname;
+      if (hash.includes("#about")) {
+        if (hash.includes("#about")) {
+          setActiveItem("About");
+          navigate("/#about");
+        }
+      } else
       if (hash === "/") {
         setActiveItem("Home");
       } else {

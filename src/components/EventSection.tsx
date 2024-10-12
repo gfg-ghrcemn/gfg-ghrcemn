@@ -73,7 +73,7 @@ const EventSection: React.FC = () => {
 
       {/* Carousel Section */}
       <div className="slider-container w-[90%] flex justify-center">
-        <Slider {...settings} className="w-[90%] flex">
+        <Slider {...settings} className="w-[90%]">
           {events.map((event, index) => (
             <div key={index}>
               <EventCard

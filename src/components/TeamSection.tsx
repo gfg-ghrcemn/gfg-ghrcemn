@@ -111,7 +111,7 @@ const TeamSection: React.FC = () => {
         </Slider>
         </div>
         <Link to="/team" className="flex justify-center mt-10">
-          <button className=" hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-green-600 shadow-lg">
+          <button className="border-1 border-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-green-600 shadow-lg">
             View All
           </button>
         </Link>

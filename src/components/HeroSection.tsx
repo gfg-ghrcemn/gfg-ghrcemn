@@ -3,6 +3,7 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { Vortex } from "./ui/vortex";
 import gfg from "../assets/logos/gfg logo.svg";
+import { Link } from "react-router-dom";
 const word = [
   {
     text: "A Community of",
@@ -47,10 +48,12 @@ export function VortexDemo() {
         </p>
         <TypewriterEffectSmooth words={word} className="text-white justify-center items-center text-center font-mono text-sm md:text-2xl  mt-6" />
         <div className="flex flex-col sm:flex-row items-center  justify-center gap-4 mt-6">
-          <button className="border-green-500 border-1 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-green-600 shadow-lg">
+          <Link className="border-green-500 border-1 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-green-600 shadow-lg" to="/events">
             Our Events
-          </button>
-          <button className="px-6 py-3 m-2 text-green-500 font-extrabold hover:border-2 hover:border-green-500 rounded-lg shadow-sm shadow-white ">Our Team</button>
+          </Link>
+          <Link to="/team" className="px-6 py-3 m-2 text-green-500 font-extrabold hover:border-2 hover:border-green-500 rounded-lg shadow-sm shadow-white ">
+            Our Team
+          </Link>
         </div>
       </Vortex>
     </div>
