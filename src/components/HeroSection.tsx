@@ -64,7 +64,7 @@ export function VortexDemo() {
 
 const HeroSection = () => {
     return (
-        <div className="overflow-hidden h-[100vh]">
+        <div className="overflow-hidden relative h-[100vh] z-0">
         <VortexDemo />
         </div>
     );
