@@ -38,7 +38,7 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, description, image, 
     <div className="w-[35vh] sm:w-[16em] h-[60vh] p-2 mx-auto overflow-hidden shadow-lg bg-transparent border-green-500 border-2 rounded-lg shadow-green-400 my-4">
       {/* Image */}
         <img
-          className="border-green-500 border-2 object-cover w-full h-[40%] sm:h-[40%] "
+          className="border-green-500 rounded-lg border-2 object-fit w-full h-[40%] sm:h-[40%] "
           src={image}
           alt="event"
           loading="lazy"
