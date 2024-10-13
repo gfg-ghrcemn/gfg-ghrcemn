@@ -1,13 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-
+import { keyframes } from "@emotion/react";
+import Reveal, { Fade } from "react-awesome-reveal";
 const AboutSection: React.FC = () => {
+  const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(-200px, -100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
   return (
+    <Reveal keyframes={customAnimation} triggerOnce>
     <div id="about" className="bg-inherit text-white flex flex-col h-screen justify-center items-center px-6 ">
-       <div className='sm:text-5xl text-3xl text-green-500 font-bold flex items-center justify-center'>
+        <Fade direction="up">
+        <div className='sm:text-5xl text-3xl text-green-500 font-bold flex items-center justify-center'>
           About Us
         </div>
+        </Fade>
         <div className='flex flex-col  px-7 md:px-10 lg:pl-20 space-y-6'>
           <div className='text-xl lg:text-2xl font-normal text-white font-game2'>
             What's GFG?
@@ -37,6 +51,7 @@ const AboutSection: React.FC = () => {
         </div>
 
     </div>
+    </Reveal>
   );
 };
 

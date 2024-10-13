@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { Container, Typography, List, ListItem, ListItemText, Box } from '@mui/material';
+
 import { Link } from 'react-router-dom';
+import { Fade } from 'react-awesome-reveal';
 
 const GfgStreakChallenge: React.FC = () => {
+    scroll(0, 0)
     return (
+        <Fade direction='up' triggerOnce >
         <div className='bg-black flex h-full'>
+            
             <Container>
                 <h1 className='text-white text-4xl font-extrabold text-center mt-4'>GFG Streak Challenge</h1>
                 <h2 className='text-white text-2xl font-bold text-center mt-2'>Join us for an 11-day Problem of the Day (POTD) Streak Challenge on GeeksforGeeks!</h2>
                 <h5 className='text-white text-lg font-bold text-center mt-2'>21 November 2024</h5>
-                <img src="/Men win competitions.png" alt="GFG Streak Challenge" className='w-full h-96 object-cover mt-4' />
+                <img loading='lazy' src="https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796248/team/men%20win%20competitions.png" alt="GFG Streak Challenge" className='w-full h-96 object-cover mt-4' />
                 <Box sx={{ mt: 2 }}>
                     <h3 className='text-white text-xl font-bold'>How to Participate:</h3>
                     <List className='text-white'>
@@ -64,7 +69,7 @@ const GfgStreakChallenge: React.FC = () => {
                         <Link to='/register' className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg'>Register Now</Link>
                     </div>
                     <div className='flex justify-center'>
-                        <hr className='w-1/2 border-green-500 border-2' />
+                        <hr className='w-full border-green-500 border-1 shadow-green-500 shadow-lg' />
                     </div>
                     <div className='flex justify-start'>
                         <Link to='/events' className='border-green-500 border-2 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg'>&lt; events</Link>
@@ -75,6 +80,7 @@ const GfgStreakChallenge: React.FC = () => {
                 </Box>
             </Container>
         </div>
+            </Fade>
 
     );
 };

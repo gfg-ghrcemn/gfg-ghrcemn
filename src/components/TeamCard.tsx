@@ -12,6 +12,7 @@ export interface TeamMember {
       return (
         <div className="sm:w-[16em] w-[30vh] my-6 mx-auto h-[20em] pb-2 text-wrap break-words bg-transparent border-2 border-green-500 flex flex-col items-center rounded-lg">
         <img
+          loading="lazy"
           src={image}
           alt="team member"
           className="w-[90%] min-h-[40%] max-h-[12.5rem]  mt-2 rounded-lg border-2 border-green-500"

@@ -1,9 +1,12 @@
 import React from 'react';
 import gfg from '../assets/logos//gfg logo.svg';
 import { Link } from 'react-router-dom';
+import { Fade } from 'react-awesome-reveal';
 const AboutPage: React.FC = () => {
+    scroll(0, 0);
     return (
         <div className="p-8 px-20 bg-black text-green-500 flex flex-col items-center justify-center">
+            <Fade direction="up" triggerOnce>
             <img src={gfg} alt="GFG GHRCEMN Student Chapter" className="w-32 h-32 mx-auto mb-6" />
             <h1 className="text-4xl font-bold mb-4 w-full">About GFG GHRCEMN Student Chapter</h1>
             <p className="mb-6 text-start">
@@ -26,6 +29,7 @@ const AboutPage: React.FC = () => {
                     join us
                 </button>
             </Link>
+            </Fade>
         </div>
     );
 };

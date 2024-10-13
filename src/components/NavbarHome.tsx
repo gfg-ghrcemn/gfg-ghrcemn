@@ -9,11 +9,10 @@ import {
   NavbarMenu,
   NavbarContent,
   NavbarItem,
-  Link,
   Button,
 } from "@nextui-org/react";
 import Gfg from "../assets/logos/gfg logo.svg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 export default function NavbarHome() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,14 +70,16 @@ export default function NavbarHome() {
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-black border-secondary text-secondary font-semibold flex justify-evenly p-2 h-[10vh] align-center rounded-lg max-w-[90%] w-[80%] mx-auto lg:mx-auto"
+      className="bg-black z-10 border-secondary text-secondary font-semibold flex justify-evenly p-2 h-[10vh] align-center rounded-lg max-w-[90%] w-[80%] mx-auto lg:mx-auto"
     >
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         className="sm:hidden"
       />
       <NavbarBrand>
-        <img src={Gfg} alt="GFG" className="h-[9vh] w-30" />
+        <Link to="/">
+          <img src={Gfg} alt="GeeksforGeeks" className="w-16 h-16" />
+        </Link>
       </NavbarBrand>
       <NavbarContent
         className="hidden sm:flex gap-4 justify-center items-center font-semibold"
@@ -92,9 +93,7 @@ export default function NavbarHome() {
               activeItem === item.name ? "text-green-500" : "text-white"
             }`}
           >
-            <Link href={item.href} className="text-inherit">
-              {item.name}
-            </Link>
+            <Link to={item.href} className="text-2xl font-Silkscreen">{item.name}</Link>
             {/* Animated green border */}
             <span
               className={`absolute bottom-0 left-0 h-[2px] bg-green-500 duration-500 ease-in-out ${
@@ -115,10 +114,10 @@ export default function NavbarHome() {
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="bg-black mt-10 font-bold text-center text-8xl underline-offset-4 uppercase text-secondary">
+      <NavbarMenu className="top-0 z-1  pt-20 flex h-[100%] mb-0 bg-black  font-bold text-center text-8xl underline-offset-4 uppercase text-secondary">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index}>
-            <Link onClick={e=>setIsMenuOpen(false)} href={item.href} className="text-green-400 text-3xl font-Silkscreen">{item.name}</Link>
+            <Link onClick={e=>setIsMenuOpen(false)} to={item.href} className="text-green-400 text-3xl font-Silkscreen">{item.name}</Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

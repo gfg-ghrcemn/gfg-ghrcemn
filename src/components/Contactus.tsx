@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { Fade, Slide } from "react-awesome-reveal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Reveal from 'react-awesome-reveal';
 
 
 const Contact = () => {
@@ -30,11 +32,14 @@ const Contact = () => {
       );
   };
   return (
-    <div id="contact" className="w-full  flex flex-col items-center justify-center pt-16 overflow-hidden">
+    <div id="contact" className="w-full  flex flex-col items-center justify-center py-16 overflow-hidden">
       <ToastContainer />
+      <Fade direction="right" triggerOnce>
       <div className="text-4xl sm:text-4xl font-bold p-4 text-green-500 mb-4">
         Contact Us
       </div>
+      </Fade>
+
       <div className="w-full flex flex-col items-center">
         <div className="flex  flex-col sm:flex-row justify-around items-center w-full px-4 sm:px-6 mb-3 max-w-[1920px]">
           <div className="sm:flex hidden justify-center items-center w-full sm:w-[50%] h-[30vh] sm:h-[50vh] mb-6 sm:mb-0">
@@ -111,6 +116,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };

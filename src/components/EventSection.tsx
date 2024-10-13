@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import EventCard from "./EventsCard";
 import event from "../lib/event.json";
+import { Fade } from "react-awesome-reveal";
 interface Event {
   title: string;
   date: string;
@@ -63,6 +64,7 @@ const EventSection: React.FC = () => {
 
   return (
     <div id="event" className="relative flex flex-col mt-10 items-center">
+      <Fade direction="up" triggerOnce>
       <h1 className="sm:text-4xl text-2xl font-extrabold text-green-400 ">
         Events
       </h1>
@@ -70,7 +72,7 @@ const EventSection: React.FC = () => {
       <div className="text-center sm:text-xl text-sm text-white mb-6">
         Check out our upcoming events and join us
       </div>
-
+      </Fade>
       {/* Carousel Section */}
       <div className="slider-container w-[90%] flex justify-center">
         <Slider {...settings} className="w-[90%]">

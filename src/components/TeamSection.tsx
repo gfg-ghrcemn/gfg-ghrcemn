@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { TeamMember } from './TeamCard';
 
 import team from "../lib/team.json"
+import Reveal, { Fade, Slide } from "react-awesome-reveal";
 
 const TeamSection: React.FC = () => {
   const isMobileWidth = window.innerWidth < 650
@@ -89,13 +90,15 @@ const TeamSection: React.FC = () => {
 
   return (
     <div id="team" className="bg-black h-screen text-white relative px-2 ">
-
+        <Fade direction="up" triggerOnce>
         <div className="text-center pt-10">
           <h1 className="sm:text-4xl text-2xl font-bold text-green-400">Meet Our Team</h1>
           <p className="text-gray-300">Our diverse and passionate team is here.</p>
         </div>
+        </Fade>
 
         {/* Carousel Section */}
+        <Reveal triggerOnce>
         <div className="slider-container w-[100%]  flex flex-col items-center mx-auto">
         <Slider {...settings} className={`w-[80%] flex items-center ${isMobileWidth && "mt-12"}`}>
           {teamMembers.map((member, index) => (
@@ -115,6 +118,7 @@ const TeamSection: React.FC = () => {
             View All
           </button>
         </Link>
+        </Reveal>
     </div>
   );
 };

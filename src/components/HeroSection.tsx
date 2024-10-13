@@ -46,7 +46,7 @@ export function VortexDemo() {
         <p className="text-white items-center  w-[100%] text-sm md:text-2xl  mt-6 text-center">
             GHRCEMN STUDENT CHAPTER
         </p>
-        <TypewriterEffectSmooth words={word} className="text-white justify-center items-center text-center font-mono text-sm md:text-2xl  mt-6" />
+        <TypewriterEffectSmooth words={word} className="text-white justify-center items-center text-center font-mono text-sm md:text-xl  mt-6" />
         <div className="flex flex-col sm:flex-row items-center  justify-center gap-4 mt-6">
           <Link className="border-green-500 border-1 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-green-600 shadow-lg" to="/events">
             Our Events
