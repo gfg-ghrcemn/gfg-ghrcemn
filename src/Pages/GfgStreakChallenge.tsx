@@ -13,7 +13,7 @@ const GfgStreakChallenge: React.FC = () => {
             <Container>
                 <h1 className='text-white text-4xl font-extrabold text-center mt-4'>GFG Streak Challenge</h1>
                 <h2 className='text-white text-2xl font-bold text-center mt-2'>Join us for an 11-day Problem of the Day (POTD) Streak Challenge on GeeksforGeeks!</h2>
-                <h5 className='text-white text-lg font-bold text-center mt-2'>21 November 2024</h5>
+                <h5 className='text-white text-lg font-bold text-center mt-2'>21 to 26 October 2024</h5>
                 <img loading='lazy' src="https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796248/team/men%20win%20competitions.png" alt="GFG Streak Challenge" className='w-full h-96 object-cover mt-4' />
                 <Box sx={{ mt: 2 }}>
                     <h3 className='text-white text-xl font-bold'>How to Participate:</h3>
@@ -55,7 +55,7 @@ const GfgStreakChallenge: React.FC = () => {
                     <List className='text-white'>
                         <h2 className='text-white text-xl font-bold'>Duration:</h2>
                         <ListItem>
-                            11 consecutive days
+                           Starting from 21 - 26 October for 11 consecutive days.
                         </ListItem>
                     </List>
                     <List className='text-white'>
@@ -66,7 +66,7 @@ const GfgStreakChallenge: React.FC = () => {
                     </List>
                     <div className='flex flex-col mb-5 w-full justify-between gap-5'>
                     <div className='flex justify-center'>
-                        <Link to='/register' className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg'>Register Now</Link>
+                        <Link to='/events/id=1' className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg'>Opening Soon</Link>
                     </div>
                     <div className='flex justify-center'>
                         <hr className='w-full border-green-500 border-1 shadow-green-500 shadow-lg' />
