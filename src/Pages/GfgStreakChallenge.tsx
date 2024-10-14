@@ -38,6 +38,24 @@ const GfgStreakChallenge: React.FC = () => {
                         </ListItem>
                     </List>
                     <List className='text-white'>
+                        <h2 className='text-white text-xl font-bold'>Note:</h2>
+                        <ListItem>                           
+                         * The Geek Streak Challenge starts on 21st October 2024. You must begin your streak between the 21st and 26th of October to be eligible, so make sure to start on time!
+                        </ListItem>
+                        <ListItem>
+                        * The final winners of the #GEEKSTREAK2024 event will be announced based on the quality of the write up that you will submit on the 11th day of the event. 
+                        </ListItem>
+                        <ListItem>
+                        * The GeeksforGeeks team and its representatives reserve the right to make the final decision regarding rewards and the final rankings or participation status of each user.
+                        </ListItem>
+                        <ListItem>
+                        * The final write up will have to be posted on your LinkedIn Profiles only to be considered for the reward.
+                        </ListItem>
+                        <ListItem>
+                        * Limited rewards only.
+                        </ListItem>
+                    </List>
+                    <List className='text-white'>
                         <h2 className='text-white text-xl font-bold'>Rewards:</h2>
                         <ListItem>
                             - Top 5 participants: Exciting goodies!
