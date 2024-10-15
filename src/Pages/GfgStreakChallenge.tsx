@@ -84,7 +84,7 @@ const GfgStreakChallenge: React.FC = () => {
                     </List>
                     <div className='flex flex-col mb-5 w-full justify-between gap-5'>
                     <div className='flex justify-center'>
-                        <Link to='/events/id=1' className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg'>Opening Soon</Link>
+                        <Link to='https://lu.ma/event/evt-iUJ5lDXJA0NLXk9' className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg'>Register</Link>
                     </div>
                     <div className='flex justify-center'>
                         <hr className='w-full border-green-500 border-1 shadow-green-500 shadow-lg' />

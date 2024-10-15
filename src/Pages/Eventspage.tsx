@@ -63,7 +63,7 @@ const EventsPage: React.FC = () => {
                   <div className="absolute w-6 h-6 -mt-3 bg-white border-4 border-green-500 rounded-full top-1/2"></div>
                 </div>
                 <div className="relative p-4 my-6 text-green-500 sm:w-[60%] w-[90%] border-green-500 border-2  rounded-xl col-start-6 col-end-10 mr-auto">
-                  <img src={event[0].image} alt="event" className="border-green-500 rounded-lg border-2 object-cover w-full h-40" />
+                  <img src={event[0].image} alt="event" className="border-green-500 rounded-lg border-2 object-fit w-full h-40" />
                   <h3 className="text-lg font-semibold lg:text-xl">{event[0].title}</h3>
                   <p className="mt-2 leading-6">{event[0].description}</p>
                   <span className="absolute text-sm text-green-500 -top-5 left-2 whitespace-nowrap">{event[0].date}</span>
