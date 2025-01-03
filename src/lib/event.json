@@ -10,27 +10,36 @@
     },
     {
       "id": "2",
-      "title": "GFG Installation",
-      "date": "December 20, 2024",
-      "description": "GFG Student Chapter Forum Installation and experts talk over the respected workshop.",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/inaugration.jpg",
-      "link": "/events/1"
+      "title": "Design Workshop",
+      "date": "January 20, 2025",
+      "description": "A workshop on UI/UX design.",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/designworkshop",
+      "link": "https://konfhub.com/design-workshop"
     },
     {
       "id": "3",
-      "title": "UI/UX IGNITE",
-      "date": "February 10-11, 2025",
-      "description": "A 2-day UI/UX hackathon, Day 1: Information Gathering, Day 2: Designing Hackathon.",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/comingsoon.png",
-      "link": "/events/id=1"
+      "title": "Tech Rivalry",
+      "date": "January 20, 2025",
+      "description": "Get ready for Tech Rivalry, an exhilarating parliamentary-style debate ...",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/techrivalry",
+      "link": "https://konfhub.com/tech-rivalry"
     },
     {
       "id": "4",
-      "title": "TECH TRIVIA",
-      "date": "January 15, 2025",
-      "description": "A tech quiz covering topics from GFG.",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/comingsoon.png",
-      "link": "/events/id=1"
+      "title": "Tech Quest",
+      "date": "January 20, 2025",
+      "description": "The Ultimate Aptitude Quiz Challenge! 🧠",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/techquest",
+      "link": "https://konfhub.com/tech-quest"
+    },
+
+    {
+      "id": "5",
+      "title": "Design Hackathon",
+      "date": "January 21, 2025",
+      "description": "A 5-hour design hackathon.",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/designhackathon",
+      "link": "https://konfhub.com/design-hackathon"
     }
 
   ]

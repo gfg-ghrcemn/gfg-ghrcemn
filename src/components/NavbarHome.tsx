@@ -1,23 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarMenuToggle,
-  NavbarMenuItem,
-  NavbarMenu,
-  NavbarContent,
-  NavbarItem,
-  Button,
-} from "@nextui-org/react";
-import Gfg from "../assets/logos/gfg logo.svg";
-import { useNavigate,Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import GFG from "../assets/logos/gfg logo.svg";
 
-export default function NavbarHome() {
+const NavbarHome = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState<string>("Home"); // Default active item
+  const [activeItem, setActiveItem] = useState("Home");
   const navigate = useNavigate();
+  const location = useLocation();
+  const contactRef = useRef<HTMLDivElement>(null);
   const menuItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -25,102 +15,113 @@ export default function NavbarHome() {
     { name: "Team", href: "/team" },
   ];
 
-  const onContactClick = () => {
-    window.location.href = "#contact";
-  };
-
-  const handleActive = (item: string) => {
-    setActiveItem(item); // Update the active item state
-  };
-
   useEffect(() => {
-    const handleScroll = () => {
-      // Check the URL hash or pathname to set the active item
-      const hash = window.location.hash || window.location.pathname;
-      if (hash.includes("#about")) {
-        if (hash.includes("#about")) {
-          setActiveItem("About");
-          navigate("/#about");
-        }
-      } else
-      if (hash === "/") {
-        setActiveItem("Home");
-      } else {
-        const activeSection = menuItems.find((item) => item.href === hash);
-        if (activeSection) {
-          setActiveItem(activeSection.name);
-        }
-      }
-    };
-
-    // Listen for hash changes or scroll to update the active item
-    window.addEventListener("hashchange", handleScroll);
-    window.addEventListener("popstate", handleScroll); // For back/forward navigation
-
-    handleScroll(); // Set the initial state
-
-    return () => {
-      window.removeEventListener("hashchange", handleScroll);
-      window.removeEventListener("popstate", handleScroll);
-    };
-  }, [menuItems]);
+    const hash = location.hash || location.pathname;
+    if (hash.includes("#about")) {
+      setActiveItem("About");
+      navigate("/#about");
+    } else if (hash === "/") {
+      setActiveItem("Home");
+    } else {
+      const activeSection = menuItems.find(item => item.href === hash);
+      if (activeSection) setActiveItem(activeSection.name);
+    }
+  }, [location, navigate]);
 
   return (
-    <Navbar
-      isBordered
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
-      className="bg-black z-10 border-secondary text-secondary font-semibold flex justify-evenly p-2 h-[10vh] align-center rounded-lg max-w-[90%] w-[80%] mx-auto lg:mx-auto"
-    >
-      <NavbarMenuToggle
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="sm:hidden"
-      />
-      <NavbarBrand>
-        <Link to="/">
-          <img src={Gfg} alt="GeeksforGeeks" className="w-16 h-16" />
-        </Link>
-      </NavbarBrand>
-      <NavbarContent
-        className="hidden sm:flex gap-4 justify-center items-center font-semibold"
-        justify="center"
-      >
-        {menuItems.map((item) => (
-          <NavbarItem
-            key={item.name}
-            onClick={() => handleActive(item.name)}
-            className={`relative pb-2 cursor-pointer ${
-              activeItem === item.name ? "text-green-500" : "text-white"
-            }`}
-          >
-            <Link to={item.href} className="text-2xl font-Silkscreen">{item.name}</Link>
-            {/* Animated green border */}
-            <span
-              className={`absolute bottom-0 left-0 h-[2px] bg-green-500 duration-500 ease-in-out ${
-                activeItem === item.name ? "w-full" : "w-0"
-              }`}
-            />
-          </NavbarItem>
-        ))}
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem>
-          <Button
-            onClick={onContactClick}
-            className="bg-green-500 p-1 hidden sm:flex text-black font-bold text-base"
-            variant="flat"
-          >
-            Contact us
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarMenu className="top-0 z-1  pt-20 flex h-[100%] mb-0 bg-black  font-bold text-center text-8xl underline-offset-4 uppercase text-secondary">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={index}>
-            <Link onClick={e=>setIsMenuOpen(false)} to={item.href} className="text-green-400 text-3xl font-Silkscreen">{item.name}</Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </Navbar>
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      <div className="bg-black border border-green-500 mx-auto lg:w-[60%] w-[90%] mt-4 rounded-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center">
+              <Link to="/" className="flex-shrink-0">
+                <img src={GFG} alt="GeeksforGeeks" className="w-20 h-20" />
+              </Link>
+            </div>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:block">
+              <div className="flex items-center space-x-8">
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setActiveItem(item.name)}
+                    className={`relative text-lg font-medium transition-colors duration-300 ${
+                      activeItem === item.name ? "text-green-500" : "text-white hover:text-green-400"
+                    }`}
+                  >
+                    {item.name}
+                    <span
+                      className={`absolute bottom-0 left-0 h-0.5 bg-green-500 transition-all duration-300 ${
+                        activeItem === item.name ? "w-full" : "w-0"
+                      }`}
+                    />
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Contact Button */}
+            <div className="hidden md:block">
+              <button
+                onClick={() => window.location.href = "/#contact"}
+                className="bg-green-500 text-black px-4 py-2 rounded-lg font-medium hover:bg-green-400 transition-colors"
+              >
+                Contact us
+              </button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-white p-2"
+              >
+                <div className="w-6 h-5 flex flex-col justify-between">
+                  <span className={`h-0.5 w-full bg-white transform transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+                  <span className={`h-0.5 w-full bg-white transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
+                  <span className={`h-0.5 w-full bg-white transform transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`md:hidden transition-all duration-300 ${isMenuOpen ? 'max-h-96' : 'max-h-0'} overflow-hidden`}>
+          <div className="px-4 pt-2 pb-4 space-y-4 bg-black flex flex-col items-center">
+            {menuItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                onClick={() => {
+                  setActiveItem(item.name);
+                  setIsMenuOpen(false);
+                }}
+                className={`block text-center text-xl py-2 ${
+                  activeItem === item.name ? "text-green-500" : "text-white"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <button
+              onClick={() => {
+                // Smooth scroll to the Contact section
+                window.location.href = "/#contact";
+                setIsMenuOpen(false);
+              }}
+              className="bg-green-500 text-black px-4 py-2 rounded-lg font-medium hover:bg-green-400 transition-colors"
+            >
+              Contact us
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </nav>
   );
-}
+};
+
+export default NavbarHome;

@@ -1,104 +1,126 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import EventCard from "./EventsCard";
-import event from "../lib/event.json";
-import { Fade } from "react-awesome-reveal";
-interface Event {
-  title: string;
-  date: string;
-  description: string;
-  image: string;
-  link: string;
-}
 
-const EventSection: React.FC = () => {
+const EventSection = () => {
   const navto = useNavigate();
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
- const events: Event[] = event;
-  
-  
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4, // Shows 3 events at a time
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
       },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 320,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      },
-    ],
-  };
+      { threshold: 0.1 }
+    );
 
-  const handleKnowMoreClick = () => {
-    navto("/events");
-  };
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div id="event" className="relative flex flex-col mt-10 items-center">
-      <Fade direction="up" triggerOnce>
-      <h1 className="sm:text-4xl text-2xl font-extrabold text-green-400 ">
-        Events
-      </h1>
+    <div 
+      ref={sectionRef}
+      id="event" 
+      className={`relative flex flex-col items-center mt-10 p-4 group transition-opacity duration-1000 ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      }`}
+    >
+      <h1 className="text-2xl sm:text-4xl font-extrabold text-green-400 mb-6">Events</h1>
+      
+      <div 
+        className="w-full max-w-md aspect-square transition-transform hover:scale-105 cursor-pointer"
+        onClick={() => navto("/events")}
+      >
+        <svg viewBox="0 0 400 400" className="w-full h-full">
+          <circle 
+            cx="200" 
+            cy="200" 
+            r="180" 
+            className="fill-none stroke-green-400/20"
+            strokeWidth="4"
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              values="0,1200;1200,0"
+              dur="15s"
+              repeatCount="indefinite"
+            />
+          </circle>
 
-      <div className="text-center sm:text-xl text-sm text-white mb-6">
-        Check out our upcoming events and join us
-      </div>
-      </Fade>
-      {/* Carousel Section */}
-      <div className="slider-container w-[90%] flex justify-center">
-        <Slider {...settings} className="w-[90%]">
-          {events.map((event, index) => (
-            <div key={index}>
-              <EventCard
-                title={event.title}
-                date={event.date}
-                description={event.description}
-                image={event.image}
-                link={event.link}
+          <circle 
+            cx="200" 
+            cy="200" 
+            r="150" 
+            className="fill-green-500/10"
+          >
+            <animate
+              attributeName="r"
+              values="150;160;150"
+              dur="3s"
+              repeatCount="indefinite"
+            />
+          </circle>
+
+          <g className="translate-x-[200px] translate-y-[200px] scale-[1.2]">
+            <rect 
+              x="-50" 
+              y="-60" 
+              width="100" 
+              height="90" 
+              className="fill-none stroke-green-400" 
+              strokeWidth="4"
+            >
+              <animate
+                attributeName="stroke-dasharray"
+                values="0,400;400,0"
+                dur="2s"
+                fill="freeze"
               />
-            </div>
-          ))}
-        </Slider>
-      </div>
+            </rect>
+            <rect 
+              x="-50" 
+              y="-60" 
+              width="100" 
+              height="20" 
+              className="fill-none stroke-green-400" 
+              strokeWidth="4"
+            />
+            <line 
+              x1="-20" 
+              y1="-70" 
+              x2="-20" 
+              y2="-50" 
+              className="stroke-green-400" 
+              strokeWidth="4"
+            />
+            <line 
+              x1="20" 
+              y1="-70" 
+              x2="20" 
+              y2="-50" 
+              className="stroke-green-400" 
+              strokeWidth="4"
+            />
+          </g>
 
-      {/* Know More Button */}
-      <div className="mt-6">
-        <button
-          onClick={handleKnowMoreClick}
-          className="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded"
-        >
-          Know More
-        </button>
+          <text 
+            x="200" 
+            y="320" 
+            className="fill-white text-lg font-medium" 
+            textAnchor="middle"
+          >
+            Click to explore events
+          </text>
+        </svg>
       </div>
+      
+      <p className="text-white text-center mt-6 text-lg sm:text-xl opacity-80">
+        Join us for exciting upcoming events!
+      </p>
     </div>
   );
 };

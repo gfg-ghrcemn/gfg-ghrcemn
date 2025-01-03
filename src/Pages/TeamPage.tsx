@@ -7,14 +7,14 @@ import team from "../lib/team.json";
 
 
 
-const EventsPage: React.FC = () => {
+const TeamPage: React.FC = () => {
   // Simulate the events data, in real app this might come from an API
-  scroll(0, 0)
+   scroll(0, 0);
   // Team members data
   const teamMembers: TeamMember[] = team
   
   return (
-    <div className="overflow-hidden p-2 flex flex-col items-center">
+    <div className="overflow-hidden relative top-10 p-2 flex flex-col items-center">
       <h1 className="text-3xl sm:text-7xl font-extrabold text-green-400 mt-12 mb-6">
         Team
       </h1>
@@ -39,4 +39,4 @@ const EventsPage: React.FC = () => {
   );
 };
 
-export default EventsPage;
+export default  TeamPage;

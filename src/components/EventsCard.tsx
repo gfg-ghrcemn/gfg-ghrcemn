@@ -21,21 +21,12 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, description, image, 
   function handleRegisteration() {
     window.open(link, "_blank");
   }
-  const customAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translate3d(-200px, -100px, 0);
-  }
+ 
 
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-`;
 
   return (
-    <Reveal keyframes={customAnimation} triggerOnce>
-    <div className="w-[35vh] sm:w-[16em] h-[60vh] p-2 mx-auto overflow-hidden shadow-lg bg-transparent border-green-500 border-2 rounded-lg shadow-green-400 my-4">
+   
+    <div className="w-[35vh] sm:w-[16em] h-[50vh] p-2 mx-auto overflow-hidden shadow-lg bg-transparent border-green-500 border-2 rounded-lg shadow-green-400 my-4">
       {/* Image */}
         <img
           className="border-green-500 rounded-lg border-2 object-fit w-full h-[40%] sm:h-[40%] "
@@ -44,8 +35,8 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, description, image, 
           loading="lazy"
         />
       {/* Event Information */}
-      <div className="px-4 py-4 sm:px-6 sm:py-4 h-[40%] sm:h-[40%]">
-        <div className="font-bold h-1/3 text-wrap mb-2 text-green-400 ">{title}</div>
+      <div className="px-4 py-4 sm:px-6 sm:py-4 h-[20vh] sm:h-[40%]">
+        <div className="font-bold h-1/3 text-wrap mb-5 text-green-400 ">{title}</div>
         <p className="text-white text-sm">{date}</p>
         {/* Description hidden on small screens */}
       </div>
@@ -59,7 +50,6 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, description, image, 
         </button>
       </div>
     </div>
-    </Reveal>
   );
 };
 

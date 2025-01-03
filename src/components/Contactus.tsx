@@ -1,47 +1,42 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Reveal from 'react-awesome-reveal';
-
 
 const Contact = () => {
   const form = useRef(null);
   const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
   const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const sendEmail = (e: any) => {
     e.preventDefault();
-    console.log(form.current);
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    form.current &&
+    if (form.current) {
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
         (result) => {
-          console.log(result.text);
           toast.success("Message sent successfully", { autoClose: 2000 });
           if (form.current) {
             (form.current as HTMLFormElement).reset();
           }
         },
         (error) => {
-          console.log(error.text);
           toast.error("Message not sent", { autoClose: 2000 });
         }
       );
+    }
   };
+
   return (
-    <div id="contact" className="w-full  flex flex-col items-center justify-center py-16 overflow-hidden">
+    <div id="contact" className="w-full flex flex-col items-center justify-center py-16 overflow-hidden">
       <ToastContainer />
       <Fade direction="right" triggerOnce>
-      <div className="text-4xl sm:text-4xl font-bold p-4 text-green-500 mb-4">
-        Contact Us
-      </div>
+        <div className="text-4xl sm:text-4xl font-bold p-4 text-green-500 mb-4">Contact Us</div>
       </Fade>
 
-      <div className="w-full flex flex-col items-center">
-        <div className="flex  flex-col sm:flex-row justify-around items-center w-full px-4 sm:px-6 mb-3 max-w-[1920px]">
+      <div className="w-full flex flex-col items-center px-4 sm:px-6 mb-3 max-w-[1920px]">
+        <div className="flex flex-col sm:flex-row justify-around items-center w-full mb-6 sm:mb-0">
           <div className="sm:flex hidden justify-center items-center w-full sm:w-[50%] h-[30vh] sm:h-[50vh] mb-6 sm:mb-0">
             <div className="w-full sm:w-[80%] h-full bg-black border-none rounded-lg sm:rounded-3xl overflow-hidden">
               <iframe
@@ -51,7 +46,7 @@ const Contact = () => {
               ></iframe>
             </div>
           </div>
-          <div className="w-full sm:w-[50%]  flex flex-col items-center bg-black border-2 border-green-500 justify-evenly rounded-lg px-4 py-2 sm:rounded-xl">
+          <div className="w-full sm:w-[50%] flex flex-col items-center bg-black border-2 border-green-500 justify-evenly rounded-lg px-4 py-6 sm:rounded-xl">
             <form
               ref={form}
               onSubmit={sendEmail}
@@ -61,9 +56,7 @@ const Contact = () => {
                 Feel free to ask us any questions
               </div>
               <div className="w-full mb-3">
-                <label className="text-lg sm:text-xl font-bold text-white mb-1">
-                  Name
-                </label>
+                <label className="text-lg sm:text-xl font-bold text-white mb-1">Name</label>
                 <input
                   type="text"
                   name="user_name"
@@ -73,9 +66,7 @@ const Contact = () => {
                 />
               </div>
               <div className="w-full mb-3">
-                <label className="text-lg sm:text-xl font-bold text-white mb-1">
-                  Email
-                </label>
+                <label className="text-lg sm:text-xl font-bold text-white mb-1">Email</label>
                 <input
                   type="email"
                   name="user_email"
@@ -83,9 +74,7 @@ const Contact = () => {
                 />
               </div>
               <div className="w-full mb-3">
-                <label className="text-lg sm:text-1xl font-bold text-white mb-1">
-                  Subject
-                </label>
+                <label className="text-lg sm:text-1xl font-bold text-white mb-1">Subject</label>
                 <input
                   type="text"
                   name="subject"
@@ -95,20 +84,16 @@ const Contact = () => {
                 />
               </div>
               <div className="w-full py-2">
-                <label className="text-lg sm:text-xl font-bold text-white mb-1">
-                  Message
-                </label>
+                <label className="text-lg sm:text-xl font-bold text-white mb-1">Message</label>
                 <textarea
                   name="message"
-
                   className="w-full px-3 py-2 rounded-lg border-2 bg-black text-white border-green-400 focus:ring-2 focus:ring-green-500 focus:shadow-md text-lg"
                   required
-   
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full sm:w-[10em]  sm:py-3 rounded-lg bg-green-500 text-white font-bold text-lg sm:text-xl hover:bg-green-600 transition-all duration-300"
+                className="w-full sm:w-[10em] sm:py-3 rounded-lg bg-green-500 text-white font-bold text-lg sm:text-xl hover:bg-green-600 transition-all duration-300"
               >
                 SUBMIT
               </button>
@@ -116,7 +101,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };
