@@ -20,7 +20,7 @@ const TeamSection = () => {
     <div
       ref={sectionRef}
       id="team"
-      className={`bg-black h-screen text-white relative px-2 flex flex-col items-center transition-opacity duration-1000 ${
+      className={`bg-black h-screen text-white relative px-2 flex flex-col justify-center items-center transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >

@@ -15,7 +15,7 @@ function App() {
 
   return (
         <BrowserRouter>
-          <div className='bg-black font-Silkscreen  m-0 p-0'>
+          <div className=' font-Silkscreen  m-0 p-0 bg-black '>
             <NavbarHome/>
             <Routes>
               <Route path="/" element={<Home/>}/>

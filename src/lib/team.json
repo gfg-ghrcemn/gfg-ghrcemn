@@ -1,5 +1,11 @@
 [
     {
+      "name": "Kanishq Birole",
+      "position": "Mentor",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/kanishq.jpg",
+      "linkedin": "https://www.linkedin.com/in/kanishqbirole?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    },
+    {
       "name": "Tanaya Pillewan",
       "position": "Chapter Lead",
       "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/c_crop,g_auto:1,h_800,w_1500/team/tanaya.jpg",
@@ -20,34 +26,9 @@
     {
       "name": "Vaibhav Talkhande",
       "position": "Technical Head",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/vai.jpg",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/c_crop,g_auto,h_1000,w_1000/team/nj1535ygmcb8qb89hjrd",
       "linkedin": "https://www.linkedin.com/in/vaibhavtalkhande/"
     },
-    {
-      "name": "Siddhanth Sakhare",
-      "position": "PRO Coordinator",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796247/team/siddhant.jpg",
-      "linkedin": "https://www.linkedin.com/in/siddhanth-kishor-sakhare-159653257/"
-    },
-    {
-      "name": "Gagan Thakre",
-      "position": "Social Media Head",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/gaganthakre.jpg",
-      "linkedin": "https://www.linkedin.com/in/gagan-thakre-93a209258"
-    },
-    {
-      "name": "Karan Yede",
-      "position": "Designing coordinator",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796250/team/karanyede.jpg",
-      "linkedin": "https://www.linkedin.com/in/karanyede"
-    },
-    {
-      "name": "Sanskruti Uge",
-      "position": "Marketing Coordinator",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/sanskriti.jpg",
-      "linkedin": "https://www.linkedin.com/in/sanskruti-uge-3883ba290/"
-    },
-
     {
       "name": "Kartikey Bisen",
       "position": "Marketing Head",
@@ -55,10 +36,10 @@
       "linkedin": "https://www.linkedin.com/in/kartikey-bisen-97b306305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
     {
-      "name": "Jilani Sheikh",
-      "position": "Event Coordinator",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/jilanisheikh.jpg",
-      "linkedin": "https://www.linkedin.com/in/jilani-sheikh-79b094305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      "name": "Riddhi Sharma",
+      "position": "Event Head",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796249/team/riddhi.jpg",
+      "linkedin": "https://www.linkedin.com/in/riddhi-sharma-25b7b9279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     {
       "name": "Karan Baghele",
@@ -67,10 +48,16 @@
       "linkedin": "https://www.linkedin.com/in/thekaranbaghele"
     },
     {
-      "name": "Riddhi Sharma",
-      "position": "Event Head",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796249/team/riddhi.jpg",
-      "linkedin": "https://www.linkedin.com/in/riddhi-sharma-25b7b9279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+      "name": "Gagan Thakre",
+      "position": "Social Media Head",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/gaganthakre.jpg",
+      "linkedin": "https://www.linkedin.com/in/gagan-thakre-93a209258"
+    },
+    {
+      "name": "Vibhuti Sarode",
+      "position": "PRO",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796248/team/vibhuti.jpg",
+      "linkedin": "https://www.linkedin.com/in/vibhuti-sarode-5b0a0b1b7"
     },
     {
       "name": "Karan Soni",
@@ -85,15 +72,27 @@
       "linkedin": "https://www.linkedin.com/in/avinash-madnani-37a01b20a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
     {
-      "name": "Vibhuti Sarode",
-      "position": "PRO",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796248/team/vibhuti.jpg",
-      "linkedin": "https://www.linkedin.com/in/vibhuti-sarode-5b0a0b1b7"
+      "name": "Siddhanth Sakhare",
+      "position": "PRO Coordinator",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796247/team/siddhant.jpg",
+      "linkedin": "https://www.linkedin.com/in/siddhanth-kishor-sakhare-159653257/"
     },
     {
-      "name": "Kanishq Birole",
-      "position": "Mentor",
-      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/kanishq.jpg",
-      "linkedin": "https://www.linkedin.com/in/kanishqbirole?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      "name": "Sanskruti Uge",
+      "position": "Marketing Coordinator",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/sanskriti.jpg",
+      "linkedin": "https://www.linkedin.com/in/sanskruti-uge-3883ba290/"
+    },
+    {
+      "name": "Jilani Sheikh",
+      "position": "Event Coordinator",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796246/team/jilanisheikh.jpg",
+      "linkedin": "https://www.linkedin.com/in/jilani-sheikh-79b094305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    },
+     {
+      "name": "Karan Yede",
+      "position": "Designing coordinator",
+      "image": "https://res.cloudinary.com/dmy2vzkgj/image/upload/v1728796250/team/karanyede.jpg",
+      "linkedin": "https://www.linkedin.com/in/karanyede"
     }
   ]

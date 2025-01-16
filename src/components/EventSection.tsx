@@ -25,7 +25,7 @@ const EventSection = () => {
     <div 
       ref={sectionRef}
       id="event" 
-      className={`relative flex flex-col items-center mt-10 p-4 group transition-opacity duration-1000 ${
+      className={`relative flex flex-col justify-center items-center mt-10 p-4 group transition-opacity duration-1000 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >

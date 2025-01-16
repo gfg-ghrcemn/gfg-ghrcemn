@@ -21,7 +21,7 @@ const EventsPage: React.FC = () => {
   const toggleShowMore = () => setShowMore(!showMore);
 
   return (
-    <div className="overflow-hidden relative top-10 p-2 flex flex-col items-center transition-all ease-linear">
+    <div className="overflow-hidden  relative top-10 p-2 flex flex-col items-center transition-all ease-linear">
       <Fade triggerOnce>
       <h1 className="text-3xl sm:text-7xl font-extrabold text-green-400 mt-12 mb-6">Events</h1>
 

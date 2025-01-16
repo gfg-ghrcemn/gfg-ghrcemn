@@ -9,7 +9,7 @@ const AboutPage: React.FC = () => {
     }, []);
 
     return (
-        <div className="p-8 px-20 relative top-10 bg-black text-green-500 flex flex-col items-center justify-center">
+        <div className="h-screen p-8 px-20 relative top-10 bg-black text-green-500 flex flex-col items-center justify-center">
             <Fade direction="up" triggerOnce>
                 <img
                     src={gfg}
@@ -19,7 +19,7 @@ const AboutPage: React.FC = () => {
                 <h1 className="text-4xl font-bold mb-4 w-full text-center">
                     About GFG GHRCEMN Student Chapter
                 </h1>
-                <p className="mb-6 text-start">
+                <p className="mb-6 text-start ">
                     Welcome to the GeeksforGeeks GHRCEMN Student Chapter! We are a community of enthusiastic students from GH Raisoni College of Engineering and Management, Nagpur, who are passionate about coding, technology, and continuous learning.
                 </p>
                 <h2 className="text-3xl font-semibold mb-3 text-start w-full">

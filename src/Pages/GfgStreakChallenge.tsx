@@ -8,7 +8,7 @@ const GfgStreakChallenge: React.FC = () => {
     scroll(0, 0)
     return (
         <Fade direction='up' triggerOnce >
-        <div className='bg-black flex h-full'>
+        <div className='bg-black flex h-full top-20 pt-20'>
             
             <Container>
                 <h1 className='text-white text-4xl font-extrabold text-center mt-4'>GFG Streak Challenge</h1>

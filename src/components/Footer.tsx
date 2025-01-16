@@ -7,7 +7,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="flex flex-row  relative font-Silkscreen justify-around  bg-green-500  w-full  text-black ftracking-wide text-[10px] sm:text-sm sm:mx-auto md:text-lg gap-1">
+    <div className="flex flex-row mt-5  relative font-Silkscreen justify-around  bg-green-500  w-full  text-black ftracking-wide text-[10px] sm:text-sm sm:mx-auto md:text-lg gap-1">
       <div className="flex flex-col sm:flex-row justify-center items-center mx-auto sm:gap-4 gap-2 m-2 sm:m-2 w-[45%]">
         <img src={logo} alt="" className="sm:h-22 w-48 h-40" />
       </div>

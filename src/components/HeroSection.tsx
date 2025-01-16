@@ -14,9 +14,9 @@ const word = [
 
 export function VortexDemo() {
   return (
-    <div className="bg-black overflow-hidden">
+    <div className="overflow-hidden">
       <Vortex
-        backgroundColor="black"
+        backgroundColor="#000000"
         className="flex flex-col h-[100vh] justify-center px-4 md:px-10 py-1"
       >
         <div className="flex justify-center items-center h-[10vh]">
