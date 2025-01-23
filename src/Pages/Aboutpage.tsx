@@ -9,12 +9,12 @@ const AboutPage: React.FC = () => {
     }, []);
 
     return (
-        <div className="h-screen p-8 px-20 relative top-10 bg-black text-green-500 flex flex-col items-center justify-center">
+        <div className="p-8 px-20 relative top-10 bg-black text-green-500 flex flex-col items-center justify-center">
             <Fade direction="up" triggerOnce>
                 <img
                     src={gfg}
                     alt="GFG GHRCEMN Student Chapter"
-                    className="w-32 h-32 mx-auto mb-6"
+                    className="w-32 h-32 mx-auto mt-10 mb-6"
                 />
                 <h1 className="text-4xl font-bold mb-4 w-full text-center">
                     About GFG GHRCEMN Student Chapter
